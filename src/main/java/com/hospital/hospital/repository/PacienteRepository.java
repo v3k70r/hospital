@@ -10,6 +10,7 @@ import java.util.List;
 
 @Repository
 public interface PacienteRepository extends JpaRepository<Paciente, Long>{
+    boolean existsByRun(String run);
     @Query("SELECT p FROM Paciente p WHERE p.apellidos = :apellido")
     List<Paciente> buscarPorApellidos(@Param("apellido") String apellido);
 

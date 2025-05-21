@@ -31,4 +31,11 @@ public class Paciente {
     @Column(nullable = false)
     private String correo;
 
+    @OneToOne(mappedBy = "paciente", cascade = CascadeType.ALL)
+    private FichaPaciente ficha;
+
+    @ManyToOne
+    @JoinColumn(name = "tipo_usuario_id", nullable = false)
+    private TipoUsuario tipoUsuario;
+
 }

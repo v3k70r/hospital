@@ -15,7 +15,7 @@ public class PacienteService {
     public List<Paciente> findAll(){
         return pacienteRepository.findAll();
     }
-    public Paciente finById(long id){
+    public Paciente findById(long id){
         return pacienteRepository.findById(id).get();
     }
     public Paciente save(Paciente paciente){
@@ -23,5 +23,8 @@ public class PacienteService {
     }
     public void delete(Long id){
         pacienteRepository.deleteById(id);
+    }
+    public boolean existePorRun(String run) {
+        return pacienteRepository.existsByRun(run);
     }
 }
