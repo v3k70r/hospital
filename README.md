@@ -1,1 +1,1 @@
-#Un proyecto de springboot
+# Un proyecto de Springboot con estructura base
